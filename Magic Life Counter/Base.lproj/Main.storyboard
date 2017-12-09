@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -418,45 +418,6 @@
                                     <constraint firstItem="JJv-kD-qJ5" firstAttribute="centerY" secondItem="vxd-DR-HZn" secondAttribute="centerY" id="sMy-NO-3EQ"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lUh-ip-7SI">
-                                <rect key="frame" x="0.0" y="341.33333333333331" width="414" height="73.333333333333314"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Haz-aX-LTP">
-                                    <size key="itemSize" width="88" height="60"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DSa-He-tc4">
-                                        <rect key="frame" x="0.0" y="0.0" width="88" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="88" height="60"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beg-Za-qaA">
-                                                    <rect key="frame" x="14" y="15" width="60" height="30"/>
-                                                    <state key="normal" title="Flip Coin">
-                                                        <color key="titleColor" red="0.98857321119999997" green="1" blue="0.93676485499999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="flipCoin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eVA-su-M2V"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="beg-Za-qaA" firstAttribute="centerX" secondItem="DSa-He-tc4" secondAttribute="centerX" id="dhc-bC-29b"/>
-                                            <constraint firstItem="beg-Za-qaA" firstAttribute="centerY" secondItem="DSa-He-tc4" secondAttribute="centerY" id="gDg-3I-KgG"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="backgroundView" destination="lUh-ip-7SI" id="rzw-Jt-22j"/>
-                                            <outlet property="selectedBackgroundView" destination="lUh-ip-7SI" id="Toc-no-F8H"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -465,24 +426,19 @@
                             <constraint firstItem="heF-p0-IjI" firstAttribute="height" secondItem="fzu-5q-IKg" secondAttribute="height" multiplier="0.45" id="56r-zM-uor"/>
                             <constraint firstItem="gMP-ay-Fb5" firstAttribute="height" secondItem="dPI-w7-Ywl" secondAttribute="height" id="Aah-xe-W4Q"/>
                             <constraint firstItem="dPI-w7-Ywl" firstAttribute="top" secondItem="fzu-5q-IKg" secondAttribute="top" id="D7t-RV-dg7"/>
-                            <constraint firstItem="lUh-ip-7SI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="FJ8-Zq-TJq"/>
                             <constraint firstItem="dPI-w7-Ywl" firstAttribute="height" secondItem="heF-p0-IjI" secondAttribute="height" id="Ff7-Fp-RnI"/>
                             <constraint firstItem="heF-p0-IjI" firstAttribute="top" secondItem="fzu-5q-IKg" secondAttribute="top" id="FfR-Vk-fsB"/>
                             <constraint firstItem="vxd-DR-HZn" firstAttribute="height" secondItem="dPI-w7-Ywl" secondAttribute="height" id="GqI-bU-soM"/>
                             <constraint firstItem="heF-p0-IjI" firstAttribute="leading" secondItem="QkO-xt-Ruh" secondAttribute="leading" id="SAc-p8-aYh"/>
                             <constraint firstItem="GmZ-xN-f4k" firstAttribute="width" secondItem="dPI-w7-Ywl" secondAttribute="width" id="SBV-q7-UxZ"/>
                             <constraint firstItem="gMP-ay-Fb5" firstAttribute="width" secondItem="dPI-w7-Ywl" secondAttribute="width" id="Sp7-JA-qXu"/>
-                            <constraint firstItem="fzu-5q-IKg" firstAttribute="trailing" secondItem="lUh-ip-7SI" secondAttribute="trailing" id="TYv-Qk-nol"/>
                             <constraint firstItem="GmZ-xN-f4k" firstAttribute="height" secondItem="dPI-w7-Ywl" secondAttribute="height" id="WUp-gJ-p2P"/>
-                            <constraint firstItem="lUh-ip-7SI" firstAttribute="centerY" secondItem="fzu-5q-IKg" secondAttribute="centerY" id="YYD-HH-UPk"/>
                             <constraint firstItem="vxd-DR-HZn" firstAttribute="width" secondItem="dPI-w7-Ywl" secondAttribute="width" id="ZzN-iC-9bC"/>
-                            <constraint firstItem="lUh-ip-7SI" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="bEb-Nq-QrN"/>
                             <constraint firstItem="heF-p0-IjI" firstAttribute="trailing" secondItem="QkO-xt-Ruh" secondAttribute="trailing" id="bvb-vr-hNd"/>
                             <constraint firstItem="heF-p0-IjI" firstAttribute="leading" secondItem="qlE-iG-z31" secondAttribute="leading" id="cQt-2q-rNr"/>
                             <constraint firstItem="heF-p0-IjI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ccl-YP-2Sh"/>
                             <constraint firstItem="QkO-xt-Ruh" firstAttribute="height" secondItem="fzu-5q-IKg" secondAttribute="height" multiplier="0.45" id="evR-jX-SzQ"/>
                             <constraint firstItem="gMP-ay-Fb5" firstAttribute="leading" secondItem="fzu-5q-IKg" secondAttribute="leading" id="g8j-6S-4oZ"/>
-                            <constraint firstItem="lUh-ip-7SI" firstAttribute="leading" secondItem="fzu-5q-IKg" secondAttribute="leading" id="gvF-7l-woQ"/>
                             <constraint firstItem="GmZ-xN-f4k" firstAttribute="top" secondItem="fzu-5q-IKg" secondAttribute="top" id="l74-ay-aEf"/>
                             <constraint firstItem="dPI-w7-Ywl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="mNu-a1-s3q"/>
                             <constraint firstItem="fzu-5q-IKg" firstAttribute="bottom" secondItem="vxd-DR-HZn" secondAttribute="bottom" id="ns7-Ca-y4V"/>
