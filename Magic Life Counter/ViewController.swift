@@ -26,14 +26,34 @@ class ViewController: UIViewController {
     @IBOutlet weak var yellowMinus: UILabel!
     @IBOutlet weak var orangeLife: UILabel!
     @IBOutlet weak var orangeMinus: UILabel!
+    
     @IBOutlet weak var redLife: UILabel!
     @IBOutlet weak var redRoll: UIImageView!
+    
     @IBOutlet weak var redDice: UIImageView!
     @IBOutlet weak var blueDice: UIImageView!
     @IBOutlet weak var purpleDice: UIImageView!
     @IBOutlet weak var greenDice: UIImageView!
     @IBOutlet weak var orangeDice: UIImageView!
     @IBOutlet weak var yellowDice: UIImageView!
+    
+    
+    @IBOutlet weak var redMinus: UILabel!
+    @IBOutlet weak var redPlus: UILabel!
+    @IBOutlet weak var redColor: UIButton!
+    @IBOutlet weak var blueMinus: UILabel!
+    @IBOutlet weak var bluePlus: UILabel!
+    @IBOutlet weak var blueColor: UIButton!
+    @IBOutlet weak var greenPlus: UILabel!
+    @IBOutlet weak var greenColor: UIButton!
+    @IBOutlet weak var yellowPlus: UILabel!
+    @IBOutlet weak var yellowColor: UIButton!
+    @IBOutlet weak var orangePlus: UILabel!
+    @IBOutlet weak var orangeColor: UIButton!
+    @IBOutlet weak var purplePlus: UILabel!
+    @IBOutlet weak var purpleColor: UIButton!
+    
+    
     
     var red = 20
     var blue = 20
@@ -57,12 +77,16 @@ class ViewController: UIViewController {
         redView.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
         greenLife.transform = CGAffineTransform(rotationAngle: CGFloat.pi*1.5)
         greenMinus.transform = CGAffineTransform(rotationAngle: CGFloat.pi*1.5)
+        greenColor.transform = CGAffineTransform(rotationAngle: CGFloat.pi*1.5)
         purpleLife.transform = CGAffineTransform(rotationAngle: CGFloat.pi*1.5)
         purpleMinus.transform = CGAffineTransform(rotationAngle: CGFloat.pi*1.5)
+        purpleColor.transform = CGAffineTransform(rotationAngle: CGFloat.pi*1.5)
         yellowLife.transform = CGAffineTransform(rotationAngle: CGFloat.pi*0.5)
         yellowMinus.transform = CGAffineTransform(rotationAngle: CGFloat.pi*0.5)
+        yellowColor.transform = CGAffineTransform(rotationAngle: CGFloat.pi*0.5)
         orangeLife.transform = CGAffineTransform(rotationAngle: CGFloat.pi*0.5)
         orangeMinus.transform = CGAffineTransform(rotationAngle: CGFloat.pi*0.5)
+        orangeColor.transform = CGAffineTransform(rotationAngle: CGFloat.pi*0.5)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -86,6 +110,260 @@ class ViewController: UIViewController {
         orangeLife.isHidden = false
         orangeDice.isHidden = true
     }
+    
+    @IBAction func redChangeColor(_ sender: Any) {
+        let alert = UIAlertController(title: "Color", message: "Choose your color", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Red", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.redView.backgroundColor = UIColor.red
+            self.redLife.textColor = UIColor.black
+            self.redMinus.textColor = UIColor.black
+            self.redPlus.textColor = UIColor.black
+            self.redColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Black", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.redView.backgroundColor = UIColor.black
+            self.redLife.textColor = UIColor.white
+            self.redMinus.textColor = UIColor.white
+            self.redPlus.textColor = UIColor.white
+            self.redColor.setTitleColor(UIColor.white, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Blue", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.redView.backgroundColor = UIColor.blue
+            self.redLife.textColor = UIColor.black
+            self.redMinus.textColor = UIColor.black
+            self.redPlus.textColor = UIColor.black
+            self.redColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "White", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.redView.backgroundColor = UIColor.white
+            self.redLife.textColor = UIColor.black
+            self.redMinus.textColor = UIColor.black
+            self.redPlus.textColor = UIColor.black
+            self.redColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Green", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.redView.backgroundColor = UIColor.green
+            self.redLife.textColor = UIColor.black
+            self.redMinus.textColor = UIColor.black
+            self.redPlus.textColor = UIColor.black
+            self.redColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: {(action) -> Void in }))
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func blueChangeColor(_ sender: Any) {
+        let alert = UIAlertController(title: "Color", message: "Choose your color", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Red", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.blueView.backgroundColor = UIColor.red
+            self.blueLife.textColor = UIColor.black
+            self.blueMinus.textColor = UIColor.black
+            self.bluePlus.textColor = UIColor.black
+            self.blueColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Black", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.blueView.backgroundColor = UIColor.black
+            self.blueLife.textColor = UIColor.white
+            self.blueMinus.textColor = UIColor.white
+            self.bluePlus.textColor = UIColor.white
+            self.blueColor.setTitleColor(UIColor.white, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Blue", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.blueView.backgroundColor = UIColor.blue
+            self.blueLife.textColor = UIColor.black
+            self.blueMinus.textColor = UIColor.black
+            self.bluePlus.textColor = UIColor.black
+            self.blueColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "White", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.blueView.backgroundColor = UIColor.white
+            self.blueLife.textColor = UIColor.black
+            self.blueMinus.textColor = UIColor.black
+            self.bluePlus.textColor = UIColor.black
+            self.blueColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Green", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.blueView.backgroundColor = UIColor.green
+            self.blueLife.textColor = UIColor.black
+            self.blueMinus.textColor = UIColor.black
+            self.bluePlus.textColor = UIColor.black
+            self.blueColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: {(action) -> Void in }))
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func greenChangeColor(_ sender: Any) {
+        let alert = UIAlertController(title: "Color", message: "Choose your color", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Red", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.greenView.backgroundColor = UIColor.red
+            self.greenLife.textColor = UIColor.black
+            self.greenMinus.textColor = UIColor.black
+            self.greenPlus.textColor = UIColor.black
+            self.greenColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Black", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.greenView.backgroundColor = UIColor.black
+            self.greenLife.textColor = UIColor.white
+            self.greenMinus.textColor = UIColor.white
+            self.greenPlus.textColor = UIColor.white
+            self.greenColor.setTitleColor(UIColor.white, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Blue", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.greenView.backgroundColor = UIColor.blue
+            self.greenLife.textColor = UIColor.black
+            self.greenMinus.textColor = UIColor.black
+            self.greenPlus.textColor = UIColor.black
+            self.greenColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "White", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.greenView.backgroundColor = UIColor.white
+            self.greenLife.textColor = UIColor.black
+            self.greenMinus.textColor = UIColor.black
+            self.greenPlus.textColor = UIColor.black
+            self.greenColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Green", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.greenView.backgroundColor = UIColor.green
+            self.greenLife.textColor = UIColor.black
+            self.greenMinus.textColor = UIColor.black
+            self.greenPlus.textColor = UIColor.black
+            self.greenColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: {(action) -> Void in }))
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func yellowChangeColor(_ sender: Any) {
+        let alert = UIAlertController(title: "Color", message: "Choose your color", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Red", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.yellowView.backgroundColor = UIColor.red
+            self.yellowLife.textColor = UIColor.black
+            self.yellowMinus.textColor = UIColor.black
+            self.yellowPlus.textColor = UIColor.black
+            self.yellowColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Black", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.yellowView.backgroundColor = UIColor.black
+            self.yellowLife.textColor = UIColor.white
+            self.yellowMinus.textColor = UIColor.white
+            self.yellowPlus.textColor = UIColor.white
+            self.yellowColor.setTitleColor(UIColor.white, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Blue", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.yellowView.backgroundColor = UIColor.blue
+            self.yellowLife.textColor = UIColor.black
+            self.yellowMinus.textColor = UIColor.black
+            self.yellowPlus.textColor = UIColor.black
+            self.yellowColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "White", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.yellowView.backgroundColor = UIColor.white
+            self.yellowLife.textColor = UIColor.black
+            self.yellowMinus.textColor = UIColor.black
+            self.yellowPlus.textColor = UIColor.black
+            self.yellowColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Green", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.yellowView.backgroundColor = UIColor.green
+            self.yellowLife.textColor = UIColor.black
+            self.yellowMinus.textColor = UIColor.black
+            self.yellowPlus.textColor = UIColor.black
+            self.yellowColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: {(action) -> Void in }))
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func orangeChangeColor(_ sender: Any) {
+        let alert = UIAlertController(title: "Color", message: "Choose your color", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Red", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.orangeView.backgroundColor = UIColor.red
+            self.orangeLife.textColor = UIColor.black
+            self.orangeMinus.textColor = UIColor.black
+            self.orangePlus.textColor = UIColor.black
+            self.orangeColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Black", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.orangeView.backgroundColor = UIColor.black
+            self.orangeLife.textColor = UIColor.white
+            self.orangeMinus.textColor = UIColor.white
+            self.orangePlus.textColor = UIColor.white
+            self.orangeColor.setTitleColor(UIColor.white, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Blue", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.orangeView.backgroundColor = UIColor.blue
+            self.orangeLife.textColor = UIColor.black
+            self.orangeMinus.textColor = UIColor.black
+            self.orangePlus.textColor = UIColor.black
+            self.orangeColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "White", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.orangeView.backgroundColor = UIColor.white
+            self.orangeLife.textColor = UIColor.black
+            self.orangeMinus.textColor = UIColor.black
+            self.orangePlus.textColor = UIColor.black
+            self.orangeColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Green", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.orangeView.backgroundColor = UIColor.green
+            self.orangeLife.textColor = UIColor.black
+            self.orangeMinus.textColor = UIColor.black
+            self.orangePlus.textColor = UIColor.black
+            self.orangeColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: {(action) -> Void in }))
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func purpleChangeColor(_ sender: Any) {
+        let alert = UIAlertController(title: "Color", message: "Choose your color", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Red", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.purpleView.backgroundColor = UIColor.red
+            self.purpleLife.textColor = UIColor.black
+            self.purpleMinus.textColor = UIColor.black
+            self.purplePlus.textColor = UIColor.black
+            self.purpleColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Black", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.purpleView.backgroundColor = UIColor.black
+            self.purpleLife.textColor = UIColor.white
+            self.purpleMinus.textColor = UIColor.white
+            self.purplePlus.textColor = UIColor.white
+            self.purpleColor.setTitleColor(UIColor.white, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Blue", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.purpleView.backgroundColor = UIColor.blue
+            self.purpleLife.textColor = UIColor.black
+            self.purpleMinus.textColor = UIColor.black
+            self.purplePlus.textColor = UIColor.black
+            self.purpleColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "White", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.purpleView.backgroundColor = UIColor.white
+            self.purpleLife.textColor = UIColor.black
+            self.purpleMinus.textColor = UIColor.black
+            self.purplePlus.textColor = UIColor.black
+            self.purpleColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Green", style: .default, handler: {(action) -> Void in DispatchQueue.main.async {
+            self.purpleView.backgroundColor = UIColor.green
+            self.purpleLife.textColor = UIColor.black
+            self.purpleMinus.textColor = UIColor.black
+            self.purplePlus.textColor = UIColor.black
+            self.purpleColor.setTitleColor(UIColor.black, for: UIControlState.normal)
+            }}))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: {(action) -> Void in }))
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
     
     @IBAction func redAdd(_ sender: Any) {
         if redLife.isHidden{
